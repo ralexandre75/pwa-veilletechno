@@ -52,7 +52,12 @@ if(window.caches) {
         cache.addAll([
             'index.html',
             'main.js',
-            'vendors/bootstrap4.min.css'
+            'style.css',
+            'vendors/bootstrap4.min.css',
+            'add_techno.html',
+            'add_techno.js',
+            'contact.html',
+            'contact.js'
         ]);
     });
 }
