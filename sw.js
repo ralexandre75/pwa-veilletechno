@@ -28,4 +28,12 @@ self.addEventListener('fetch', evt => {
         evt.respondWith(new Response('<h1>Pas de connexion internet</h1><div>Application en mode dégradé. Veuillez vous connecter</div>', headers));
     }
     console.log('fetch event sur url', evt.request.url);
+
+    evt.respondWith(
+        caches.match(evt.request).then(res => {
+            if(res) {
+                return res;
+            }
+        })
+    )
 });
