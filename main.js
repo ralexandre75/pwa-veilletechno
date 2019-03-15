@@ -41,3 +41,10 @@ if(navigator.serviceWorker) {
     navigator.serviceWorker.register('sw.js')
                             .catch(err => console.error);
 }
+
+
+if(window.caches) {
+    caches.open('veille-techno-1.0');
+    caches.open('other-1.0');
+    caches.keys().then(console.log);
+}
